@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc && ts-node ./bin/www.ts",
     "start-test": "tsc && ts-node ./bin/test-www.ts",
-    "build": "tsc",
+    "build": "netlify deploy --prod",
     "build-prod": "tsc && ts-node ./copyAssets.ts",
     "test-start": "tsc && ts-node ./bin/test-www.ts",
     "start-prod": "node ./bin/www.js",
@@ -36,7 +36,10 @@
     "tslint": "^6.1.0",
     "typescript": "^4.8.3",
     "xlsx": "^0.18.2",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "netlify-cli":"^12.7.2",
+    "netlify-lambda":"^2.0.15",
+    "serverless-http":"^2.7.0"
   },
   "devDependencies": {
     "@types/chai": "^4.2.9",

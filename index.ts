@@ -10,6 +10,7 @@ export let app: any = express();
 require('dotenv').config();
 const apiVersion = require('./version.json');
 const os = require('os');
+const router = express.Router();
 
 app.get('/', (req: any, res: any) => {
 	const result: any = {
@@ -106,6 +107,7 @@ class App {
 		app.use(cookieParser());
 		app.use(express.static(path.join(__dirname, 'public')));
 
+		app.use('/.netlify/functions/api',router)
 	}
 }
 export default App;
