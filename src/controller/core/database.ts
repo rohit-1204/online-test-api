@@ -11,7 +11,7 @@ export default class Database {
 		try {
 			const connectionString = String(process.env.DB_CONNECTION_STRING);
 			if (!Database.db) {
-				const con = await MongoClient.connect(connectionString, { useNewUrlParser: true });
+				const con = await MongoClient.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
 				Database.db = con.db();
 				console.log('db connection : true');
 				return Result.success('', 'Database connected successfully');
@@ -53,7 +53,7 @@ export default class Database {
 			}
 			const responseToSend: any = [];
 			records.forEach((record: any) => {
-				record._id ? responseToSend.push({_id: record._id}) : '';
+				record._id ? responseToSend.push({ _id: record._id }) : '';
 			});
 			return Result.success(responseToSend, 'Record created successfully', StatusCode.success);
 		} catch (error) {
@@ -87,7 +87,7 @@ export default class Database {
 		}
 		const responseToSend: any = [];
 		records.forEach((record: any) => {
-			record._id ? responseToSend.push({_id: record._id}) : '';
+			record._id ? responseToSend.push({ _id: record._id }) : '';
 		});
 		return Result.success(responseToSend, 'Record updated successfully', StatusCode.success);
 	}
@@ -97,7 +97,7 @@ export default class Database {
 		}
 		let missingId = false;
 		let missingObjType = false;
-		for (let recordIndex = 0; recordIndex < records.length; recordIndex ++) {
+		for (let recordIndex = 0; recordIndex < records.length; recordIndex++) {
 			if (!records[recordIndex]['objType']) {
 				missingObjType = true;
 			}
@@ -107,11 +107,11 @@ export default class Database {
 		}
 		if (missingId || missingObjType) {
 			return missingId ? Result.error(i18n.__('Database.delete.missingId:Please provide record id to delete'), '', StatusCode.badRequest) :
-			Result.error(i18n.__('Database.delete.missingObjType:Please provide objType to delete record'), '', StatusCode.badRequest);
+				Result.error(i18n.__('Database.delete.missingObjType:Please provide objType to delete record'), '', StatusCode.badRequest);
 		}
 		let response: any;
-		for (let recordIndex = 0; recordIndex < records.length; recordIndex ++) {
-			response = await Database.db.collection(records[recordIndex]['objType']).deleteOne({_id: records[recordIndex]['_id']});
+		for (let recordIndex = 0; recordIndex < records.length; recordIndex++) {
+			response = await Database.db.collection(records[recordIndex]['objType']).deleteOne({ _id: records[recordIndex]['_id'] });
 		}
 		return Result.success('', 'Records deleted successfully', StatusCode.success);
 	}
