@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc && ts-node ./bin/www.ts",
     "start-test": "tsc && ts-node ./bin/test-www.ts",
-    "build": "netlify deploy --prod",
+    "build": "tsc",
     "build-prod": "tsc && ts-node ./copyAssets.ts",
     "test-start": "tsc && ts-node ./bin/test-www.ts",
     "start-prod": "node ./bin/www.js",
