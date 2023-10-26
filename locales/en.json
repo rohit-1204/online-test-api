@@ -1,0 +1,96 @@
+{
+	"User": {
+		"checkEmailExists": {
+			"userNotFound": "User not found",
+			"emailIsMissing": "Please enter your email",
+			"invalidEmailToCheck": "Invalid email"
+		},
+		"sendCode": {
+			"sendCodeForUser": "Please enter email"
+		},
+		"registerUser": {
+			"invalidCode": "Invalid or expired verification code",
+			"invalidEmail": "Invalid email",
+			"missingIsPassword": "Please enter password",
+			"wrongPasswordFormatEntered": "Password should contain 8 characters and alphanumeric with a capital letter and special character"
+		},
+		"forgotPassword": {
+			"invalidUsername": "Invalid username"
+		},
+		"updateUserInfo": {
+			"invalidFieldsToUpdate": "Invalid fields [%s] provided for update"
+		},
+		"updatePassword": {
+			"userNameMissing": "User name is missing",
+			"codeMissing": "Code is missing",
+			"wrongPasswordSize": "Password should contain 8 characters and alphanumeric with a capital letter and special character",
+			"wrongPasswordFormatEntered": "Password should contain 8 characters and alphanumeric with a capital letter and special character",
+			"invalidUsername": "User not found",
+			"bodyMissing": "Body is missing",
+			"old&newPasswordCantSame": "New password cannot be the same as the old password"
+		},
+		"changePassword": {
+			"bodyMissing": "Body is missing",
+			"oldPasswordMissing": "Please provide old password",
+			"wrongPasswordSize": "Password should contain 8 characters and alphanumeric with a capital letter and special character",
+			"wrongPasswordFormatEntered": "Password should contain 8 characters and alphanumeric with a capital letter and special character",
+			"invalidOldPassword": "Provided old password is invalid",
+			"old&newPasswordCantSame": "New password cannot be the same as the old password"
+		}
+	},
+	"Code sent successfully": "Code sent successfully",
+	"Code verified successfully": "Code verified successfully",
+	"verificationCode": {
+		"invalidCode": "Invalid or Expired code",
+		"validateVerificationCode": {
+			"missingFields": "Please enter code, verificationCodeId or email"
+		}
+	},
+	"User registered successfully": "User registered successfully",
+	"Authenticate": {
+		"authenticateSession": {
+			"sessionExpired": "Session expired"
+		},
+		"authenticateUserToken": {
+			"userTokenMissing": "Please send userToken to authenticate",
+			"expiredUserToken": "User token expired"
+		},
+		"authenticatesid": {
+			"sidMissing": "Please send sid to authenticate"
+		}
+	},
+	"User session authenticated successfully": "User session authenticated successfully",
+	"Auth": {
+		"login": {
+			"invalidUserNameOrPasswrd": "Invalid username or password",
+			"missinguserName": "Username is missing",
+			"invalidEmailFormat": "Please enter valid email"
+		},
+		"getUserToken": {
+			"expiredOrInvalidCode": "Entered code is invalid or expired",
+			"codeIsMissing": "Code is missing",
+			"UserNotExists": "User not found"
+		}
+	},
+	"User token authenticated successfully": "User token authenticated successfully",
+	"User already exists": "User already exists",
+	"Please provide user and contact": "Please provide user and contact",
+	"Company": {
+		"registerCompany": {
+			"missingdata": "No data available"
+		}
+	},
+	"Ein": {
+		"checkEin": {
+			"missingein": "Please enter your company’s nine-digit EIN."
+		}
+	},
+	"Document": {
+		"uploadDocument": {
+			"missingdata": "No data available"
+		}
+	},
+	"Internal server error": "Internal server error",
+	"Password updated successfully": "Password updated successfully",
+	"Password changed successfully": "Password changed successfully"
+}
